@@ -147,6 +147,7 @@ project-name/
 ├── README.md                   # Project documentation
 ├── requirements.txt            # Dependencies
 └── setup.py                    # Package installation
+```
 ---
 
 ## Key Components Explained
@@ -207,6 +208,7 @@ Applying software design patterns improves code structure and flexibility:
 ### Factory Pattern
 
 Dynamically create different model objects based on configuration.
+---
 
 ```python
 # Example: src/models/factory.py
@@ -219,9 +221,12 @@ class ModelFactory:
         # ... other model types
         else:
             raise ValueError(f"Unknown model type: {model_type}")
+```
+----
 ### Strategy Pattern
 
 Define a family of algorithms (e.g., training strategies) and make them interchangeable.
+---
 
 ```python
 # Example: src/training/strategies.py
@@ -241,9 +246,13 @@ class CrossValidationStrategy(TrainingStrategy):
     def train(self, model, X_train, y_train, **kwargs):
         # Implement cross-validation logic
         pass
+```
+---
+
 ### Template Pattern
 
 Define the skeleton of an algorithm in a base class, letting subclasses override specific steps.
+---
 
 ```python
 # Example: src/training/base_trainer.py
@@ -265,6 +274,10 @@ class ModelTrainingTemplate(ABC):
     def build_model(self): pass
 
     # ... other abstract or concrete methods ...
+
+```
+---
+
 ## Essential MLOps Tools
 
 Leverage specialized tools to enhance your MLOps workflow:
